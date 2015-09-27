@@ -1,0 +1,11 @@
+<div class="container">
+  <section class="pokemones">
+    <article class="pokemon" ng-repeat="pokemon in pokemones | filter: filtroPokemon">
+      <a ng-href="/{{ pokemon.name | lowercase }}">
+        <div class="pokemonid">{{ pokemon.id }}</div>
+        <img ng-src="{{ pokemon.image_url }}" alt="">
+        <h3>{{ pokemon.name }}</h3>
+      </a>
+    </article>
+  </section>
+</div>

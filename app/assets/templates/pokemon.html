@@ -1,0 +1,25 @@
+<div class="container">
+  <section class="pokemon-detail">
+    <div class="pokemonid">{{ pokemon.id }}</div>
+    <img src="{{ pokemon.image_url }}" alt="">
+    <div class="stats">
+      <h2>{{ pokemon.name }}</h2>
+      <p>{{ pokemon.description }}</p>
+      <h3>Peso</h3>{{ pokemon.weight }}
+      <h3>Altura</h3>{{ pokemon.height }}
+      <h3>TIPO</h3>
+      <ul>
+        <li class="type {{ tipo | lowercase }}" ng-repeat="tipo in pokemon.types">{{ tipo }}</li>
+      </ul>
+      <div ng-if="pokemon.evolutions.length > 0">
+        <h3>EVOLUCIONES</h3>
+        <ul>
+          <li class="evolution" ng-repeat="evolucion in pokemon.evolutions">
+            <h4>{{ evolucion.name }}</h4>
+            <img ng-src="{{ evolucion.image_url }}">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>

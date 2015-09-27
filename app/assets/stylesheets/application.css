@@ -1,0 +1,164 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+  font-size: 16px; /* 1em = 16px */
+  margin: 0;
+  padding: 0;
+  font-family: "ubuntu";
+}
+
+h1 {
+  font-size: 4em; /* 64px */
+  margin-top: 0;
+}
+
+h2, h3 {
+  color: #3593DD;
+}
+
+header {
+  background-image: url(overlay.png), url(background_header.jpg);
+  background-position: center, left bottom;
+  background-repeat: repeat, no-repeat;
+  background-size: cover, cover;
+  color: white;
+  height: 480px;
+  padding-top: 150px;
+  text-align: center;
+  transition: all linear 5s;
+}
+header:hover {
+  background-position: center, right top;
+}
+.pokeblue {
+  width: 144px;
+}
+h1 span {
+  color: #3593DD;
+}
+input[type="text"] {
+  border-radius: 12px;
+  border: 5px solid #D3D3D3;
+  color: #2979B8;
+  font-size: 1.2em;
+  padding: 12px;
+  text-align: center;
+  transition: all .5s;
+  width: 500px;
+}
+input[type="text"]:focus {
+  outline: none;
+  border-color: #3593DD;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  padding-top: 50px;
+  margin: 0 auto;
+}
+.pokemon {
+  background-color: #e6e6e6;
+  border-radius: 12px;
+  width: 23.5%;
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all .5s;
+}
+.pokemon:nth-child(4n) {
+  margin-right: 0;
+}
+.pokemon:hover {
+  background-color: #bdd1ff;
+}
+.pokemon a {
+  text-decoration: none;
+}
+.pokemon img {
+  display: inline-block;
+  width: 100%;
+}
+
+.pokemon .pokemonid {
+  background-color: #3593DD;
+  font-size: 1.5em;
+  text-align: center;
+  border-radius: 12px 12px 0 0;
+}
+
+.pokemones h3 {
+  background-color: #646464;
+  border-radius: 0 0 12px 12px;
+  font-size: 1.25em;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.pokemon .pokemonid, .pokemones h3 {
+  color: white;
+  padding: 5px 0;
+}
+
+.pokemon-detail {
+  width: 100%;
+  background-color: #e6e6e6;
+  border-radius: 12px;
+  margin-bottom: 50px;
+  display: inline-block;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.pokemon-detail .pokemonid {
+  background-color: #3593DD;
+  border-radius: 12px 0 12px 0;
+  color: white;
+  width: 70px;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 1.5em;
+}
+.pokemon-detail img {
+  float: left;
+  width: 30%;
+}
+.stats {
+  margin-left: 360px;
+  padding: 0 2em;
+}
+.type {
+  background-color: #555;
+  padding: 5px;
+  color: white;
+  width: 80px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.evolution {
+  display: inline-block;
+}
+
+.planta { background-color: #9BCC50; }
+.veneno { background-color: #B97FC9; }
+.fuego { background-color: #FD7D24; }
+.volador { background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%); }
+.hielo { background-color: #3dc7ef; }
+.psiquico { background-color: #f366b9; }
